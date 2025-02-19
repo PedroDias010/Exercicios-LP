@@ -47,43 +47,75 @@ Para mais informações acesse [Aula 01: Fluxogramas.](https://www.notion.so/cai
    
    ```mermaid
    flowchart TD
-      B["Sua resposta aqui!"]
-   
+        start(( inicio )) --> input1[\ Digite o N1 \]
+        input1 --> input2[\Digite o N2 \]
+        input2 --> sum[Resultado = N1 + N2]
+        sum --> finish([fim])
    ```
    
-4. Elabore um fluxograma que leia um número e exiba se ele é positivo ou negativo.
+   4. Elabore um fluxograma que leia um número e exiba se ele é positivo ou negativo.
    
-   ```mermaid
-   flowchart TD
-      C["Sua resposta aqui!"]
-   ```
+      ```mermaid
+      flowchart TD
+            start(( inicio )) --> input1[/ Digite sua idade /]
+            input1 --> test{ Número >0 \n ou \n Número <0? }
+            test --> |Sim| A[\ Positivo \]
+            test --> |Não| B[\ Negativo \]
+            A --> Finish([Fim])
+            B --> Finish
+      ```
    
 5. Desenvolva um fluxograma que leia a idade de uma pessoa e indique se ela pode votar.
    
    ```mermaid
    flowchart TD
-      D["Sua resposta aqui!"]
+    start(( inicio )) --> input1[/ Digite sua idade \]
+    input1 --> test{ idade >16 \n ou \n Idade <16 }
+   test ==> |Sim| A[\ Positivo \]
+   test --> |Não| B[\ Negativo \]
+   A --> Finish([FIm])
+   B --> Finish
    ```
    
 6. Crie um fluxograma que leia dois números e determine o maior entre eles.
    
    ```mermaid
    flowchart TD
-      E["Sua resposta aqui!"]
+      start(( Inicio )) --> A[/ Digite N1 /]
+      start --> B[/ Digite N2 /]
+      A --> test{ N> determinado }
+      B --> test
+      test --> finish([Fim])
+   
+      
    ```
    
 7. Crie um fluxograma que leia três números e determine o maior entre eles.
    
    ```mermaid
    flowchart TD
-      F["Sua resposta aqui!"]
+      start(( inicio )) --> A[/ Digite N! /]
+   start --> B[/ Digite N2 /]
+   start --> C[/ Digite N3 /]
+   A --> test{ N> determinado }
+   B --> test
+   C --> test
+   test --> Finish([FIm])
+   
    ```
    
 8. Construa um fluxograma para calcular o fatorial de um número fornecido pelo usuário.
    
    ```mermaid
    flowchart TD
-      G["Sua resposta aqui!"]
+   A(( Inicio )) --> B[/ Digite um numero /]
+   B --> C[r=1]
+   C --> D{n>1?}
+   D--> |Sim| E{r=r*n}
+   F --> D
+   D --> |Não| G[/ Resposta = r/]
+   G --> H([Fim])
+      
    ```
    
 9. Elabore um fluxograma para verificar se um número digitado pelo usuário é par.
@@ -103,5 +135,7 @@ Para mais informações acesse [Aula 01: Fluxogramas.](https://www.notion.so/cai
    
    ```mermaid
    flowchart TD
-      I["Sua resposta aqui!"]
+   A(( Inicio )) --> B[\Digite um numero\]
+   B-->
+      
    ```
